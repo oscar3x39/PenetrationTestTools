@@ -1,0 +1,16 @@
+version: '3.2'
+
+networks:
+    lan:
+
+services:
+    sudomy:
+        build:
+            context: .
+            dockerfile: ./dockerfiles/sudomy
+        container_name: sudomy
+        volumes:
+            - ./src/sudomy:/usr/lib/sudomy
+            - ./outputs/sudomy:/usr/lib/sudomy/output
+        networks:
+            - lan

@@ -1,0 +1,6 @@
+env:
+    run: docker-compose run --rm
+alias:
+    'sudomy':
+        '-d':
+            command: $run sdomy
